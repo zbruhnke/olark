@@ -1,3 +1,3 @@
 Olark::Application.routes.draw do
-  root :to => "hooks#index"
+  root :to => "hooks#create"
 end

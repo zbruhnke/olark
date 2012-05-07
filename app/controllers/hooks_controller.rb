@@ -1,8 +1,9 @@
 class HooksController < ApplicationController
 require 'json'
 
-  def post '/' do
-    push = JSON.parse(params[:payload])
-    "I got some JSON: #{push.inspect}"
+  def create
+    Rails.logger.info "I got some JSON: #{params}"
+    data = ActiveSupport::JSON.decode(request.body.to_json)
+    render nothing: true, status: 200
   end
 end

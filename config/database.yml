@@ -6,8 +6,6 @@
 development:
   adapter: postgresql
   database: db/development
-  username: postgres
-  password: secret
   host: localhost
   encoding: UTF8
 
@@ -17,15 +15,11 @@ development:
 test:
   adapter: postgresql
   database: db/test
-  username: postgres
-  password: secret
   host: localhost
   encoding: UTF8
 
 production:
   adapter: postgresql
   database: db/production
-  username: postgres
-  password: secret
   host: localhost
   encoding: UTF8

@@ -3,7 +3,7 @@ require 'json'
 
   def create
     Rails.logger.info "I got some JSON: #{params}"
-    data = ActiveSupport::JSON.decode(request.body.to_json)
+    data = JSON.parse(request.body.read)
     render nothing: true, status: 200
   end
 end

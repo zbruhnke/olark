@@ -3,9 +3,7 @@ require 'json'
 
   def create
     Rails.logger.info "I got some JSON: #{params}"
-    data = JSON.parse(request.body.read)
-    @webhook.object = params[:webhook]
-    @webhook.save
+    data = JSON.parse(json)
     render nothing: true, status: 200
   end
 end

@@ -1,3 +1,4 @@
 Olark::Application.routes.draw do
-  root :to => "hooks#create"
+  root :to => "chat#create"
+  match '/chats' => "chat#index"
 end

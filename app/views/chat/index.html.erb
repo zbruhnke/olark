@@ -1,0 +1,13 @@
+<h1>Listing Chats</h1>
+
+<table>
+  <tr>
+    <th>Kind</th>
+  </tr>
+
+<% @chats.each do |chat| %>
+  <tr>
+    <td><%= chat.kind %></td>
+  </tr>
+<% end %>
+</table>

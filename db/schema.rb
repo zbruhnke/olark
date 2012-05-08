@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120507205309) do
+ActiveRecord::Schema.define(:version => 20120508172506) do
+
+  create_table "chats", :force => true do |t|
+    t.string   "kind"
+    t.string   "fullname"
+    t.string   "email_address"
+    t.string   "city"
+    t.string   "region"
+    t.string   "country"
+    t.string   "country_code"
+    t.string   "organization"
+    t.string   "ip"
+    t.string   "browser"
+    t.string   "operating_system"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "webhooks", :force => true do |t|
     t.string   "serialize"

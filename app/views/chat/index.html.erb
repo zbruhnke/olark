@@ -1,15 +1,17 @@
-<h1>Listing Chats</h1>
-
+<center><h4>Chats</h4></center></br>
 <table>
   <tr>
     <th>Kind</th>
-    <th>Visitor</th>
+    <th>Browser</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
-<% @chat.each do |chat| %>
+<% @chats.each do |chat| %>
   <tr>
-    <td><%= chat.kind %></td>
-    <td><%= chat.visitor %></td>
+    <td><%= link_to chat.kind, chat %></td>
+    <td><%= link_to chat.browser, chat %></td>
   </tr>
 <% end %>
 </table>

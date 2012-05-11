@@ -14,4 +14,15 @@ require 'json'
       end
     end
   end
+  
+  def index
+    @chat = Chat.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @chat }
+    @title = @chat.name
+    end
+  end
+  
 end

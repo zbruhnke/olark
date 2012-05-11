@@ -2,8 +2,7 @@ class ChatController < ApplicationController
 require 'json'
 
   def create
-    data = params[:data]
-    @chat = Chat.new(JSON.parse(data))
+    @chat = JSON.parse(params[:browser, :city, :country, :country_code, :email_address, :fullname, :id, :ip, :kind, :operating_system, :organization, :region])
     
     respond_to do |format|
       if @chat.save

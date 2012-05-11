@@ -9,9 +9,11 @@
   </tr>
 
 <% @chats.each do |chat| %>
+  <% unless chat.id.blank? %>
   <tr>
     <td><%= link_to chat.kind, chat %></td>
     <td><%= link_to chat.browser, chat %></td>
   </tr>
+  <% end %>
 <% end %>
 </table>

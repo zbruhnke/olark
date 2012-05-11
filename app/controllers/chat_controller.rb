@@ -23,6 +23,5 @@ require 'json'
       format.json { render json: @chat }
     @title = @chat.name
     end
-  end
-  
+  end 
 end

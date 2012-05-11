@@ -22,9 +22,9 @@ require 'json'
         ip: "123.4.56.78",
         browser: "Chrome 12.1",
         operatingSystem: "Windows"
-        customFields: {myInternalCustomerId: "12341234", favoriteColor: "blue"}
       }
     })
+  end
     
     respond_to do |format|
       if @chat.save

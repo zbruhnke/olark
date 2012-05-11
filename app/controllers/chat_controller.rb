@@ -24,8 +24,7 @@ require 'json'
         operatingSystem: "Windows"
       }
     })
-  end
-    
+  
     respond_to do |format|
       if @chat.save
         flash[:notice] = 'Chat was successfully created.'

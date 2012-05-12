@@ -143,6 +143,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   jquery-rails
+  json
   mysql2
   rails (= 3.2.3.rc2)
   sass-rails (~> 3.2.3)

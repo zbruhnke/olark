@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120508175920) do
+ActiveRecord::Schema.define(:version => 20120512001549) do
 
   create_table "chats", :force => true do |t|
     t.string   "kind"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(:version => 20120508175920) do
     t.string   "operating_system"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "olark_id"
+    t.string   "visitor_id"
+    t.string   "data"
+  end
+
+  create_table "tests", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "webhooks", :force => true do |t|
+    t.string   "serialize"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -1,7 +1,7 @@
 <center><h4>Chats</h4></center></br>
 <table>
   <tr>
-    <th>Kind</th>
+    <th>Visitor ID</th>
     <th>Browser</th>
     <th></th>
     <th></th>
@@ -11,7 +11,7 @@
 <% @chats.each do |chat| %>
   <% unless chat.id.blank? %>
   <tr>
-    <td><%= link_to chat.kind, chat %></td>
+    <td><%= link_to chat.visitor_id, chat %></td>
     <td><%= link_to chat.browser, chat %></td>
   </tr>
   <% end %>

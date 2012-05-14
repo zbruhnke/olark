@@ -2,8 +2,6 @@ class Chat < ActiveRecord::Base
   attr_accessible :browser, :city, :country, :country_code, :email_address, :fullname, :olark_id, :visitor_id, :ip, :kind, :operating_system, :organization, :region, :data
 
   def self.new_from_json(params)
-    params[:visitor][:item_count] = params[:items].size	
-    params[:items] = nil
     new({
           kind: params[:visitor][:kind],
           visitor_id: params[:visitor][:visitor_id],

@@ -1,15 +1,14 @@
 class ChatsController < ApplicationController
-require 'json'
 
   def create
     @chat = Chat.new_from_json(params)
-    
+
     respond_to do |format|
       if @chat.save
         flash[:notice] = 'Chat was successfully created.'
-        render nothing: true, status: 200
+        format.json { render json: @chat, status: :created }
       else
-        format.json  { render json: @chat.errors, status: :unprocessable_entity }
+        format.json { render json: @chat.errors, status: :unprocessable_entity }
       end
     end
   end

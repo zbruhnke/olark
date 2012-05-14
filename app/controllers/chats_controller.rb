@@ -31,4 +31,33 @@ class ChatsController < ApplicationController
     end
   end
   
+  def update
+    @chat = Chat.find(params[:id])
+
+    respond_to do |format|
+      if @chat.update_attributes(params[:chat])
+        format.html { redirect_to @chat, notice: 'chat was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @chat.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /chats/1
+  # DELETE /chats/1.json
+  def destroy
+    @chat = Chat.find(params[:id])
+    @chat.destroy
+
+    respond_to do |format|
+      format.html { redirect_to chats_url }
+      format.json { head :no_content }
+    end
+  end
+  
+  def edit
+    @chat = Chat.find(params[:id])
+  end
 end

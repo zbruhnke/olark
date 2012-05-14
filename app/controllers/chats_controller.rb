@@ -14,12 +14,21 @@ class ChatsController < ApplicationController
   end
   
   def index
+    @chats = Chat.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @chats }
+    end
+  end
+  
+  def show
     @chat = Chat.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @chat }
-    @title = @chat.name
     end
-  end 
+  end
+  
 end

@@ -12,7 +12,7 @@
   <% unless chat.id.blank? %>
   <tr>
     <td><%= link_to chat.visitor_id, chat %></td>
-    <td><%= link_to chat.browser, chat %></td>
+    <td><%= link_to chat.fullname, chat %></td>
   </tr>
   <% end %>
 <% end %>

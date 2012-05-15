@@ -2,9 +2,8 @@ class Chat < ActiveRecord::Base
   attr_accessible :browser, :city, :country, :country_code, :email_address, :fullname, :olark_id, :visitor_id, :ip, :kind, :operating_system, :organization, :region, :data
 
   def self.new_from_json(params)
-    p params
     params = JSON.parse(params[:data])
-    p params
+    Rails.logger.info params.class
     new({
           kind:             params[:kind],
           olark_id:         params[:olark_id],
